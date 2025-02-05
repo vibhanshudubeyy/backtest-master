@@ -1,13 +1,18 @@
-import { useState } from 'react'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BeginnerGuide } from "./pages/BeginnerGuide";
+import { Home } from "./pages/Home";
+// import data from './data.json';
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/beginner-guide" element={<BeginnerGuide />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
